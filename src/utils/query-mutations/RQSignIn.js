@@ -4,8 +4,8 @@ import { useMutation } from "react-query";
 
 const RQSignIn = (onSuccess, onError) => {
   const apiLogin = async (data) => {
-    const clientSecret = "clientSecret";
-    const clientId = "clientId";
+    const clientSecret = "codebazeKe123";
+    const clientId = "codebaze";
     const timestamp = new Date()
       .toISOString()
       .replace(/[-:.TZ]/g, "")
