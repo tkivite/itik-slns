@@ -1,15 +1,22 @@
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
-import { routes } from './routes';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const router = createBrowserRouter(routes)
+const router = createBrowserRouter(routes);
+
+const queryClient = new QueryClient();
+
 root.render(
-
- <RouterProvider router={router}/>
-
+  <QueryClientProvider client={queryClient}>
+    <ToastContainer stacked />
+    <RouterProvider router={router} />
+    <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+  </QueryClientProvider>
 );
-
-
