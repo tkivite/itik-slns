@@ -22,4 +22,4 @@ RUN --mount=type=cache,target=/app/.next \
 EXPOSE 3009
 
 # Use production mode instead of dev
-CMD ["yarn", "start"]
+CMD ["yarn", "preview"]
