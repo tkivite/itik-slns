@@ -283,14 +283,14 @@ const Mentorship = () => {
                             <p className="text-sm sm:text-base text-gray-600 mb-2">
                               {item.description}
                             </p>
-                            <div>
+                            {/* <div>
                               <p className="text-sm sm:text-base font-semibold text-gray-700">
                                 Mentor: {item.mentor}
                               </p>
                               <p className="text-sm sm:text-base text-gray-600">
                                 {item.bio}
                               </p>
-                            </div>
+                            </div> */}
                           </motion.div>
                         )}
                       </motion.div>
